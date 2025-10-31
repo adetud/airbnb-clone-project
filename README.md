@@ -14,3 +14,21 @@ Sets up and maintains CI/CD pipelines, manages containerization (e.g., Docker), 
 
 ### Project Manager  
 Coordinates project timelines, divides tasks, monitors progress, ensures team collaboration, and communicates between stakeholders. Ensures project delivery aligns with goals and schedule.
+## Technology Stack
+
+### Backend Framework
+**Django** — A Python-based web framework used to build the RESTful APIs that handle all application logic.
+
+### Database
+**PostgreSQL / MySQL** — Relational database used to store users, bookings, payments, and reviews.
+
+### API Layer
+**GraphQL / Django REST Framework** — Enables flexible data queries and efficient client-server communication.
+
+### CI/CD Tools
+**GitHub Actions** — Automates testing and deployment processes.  
+**Docker** — Used to containerize the app for consistent environments.
+
+### Security
+**JWT (JSON Web Tokens)** — Used for authentication and session management.  
+**HTTPS** — Ensures encrypted communication between client and server.
