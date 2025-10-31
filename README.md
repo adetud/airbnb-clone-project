@@ -97,3 +97,35 @@ Allows guests to leave feedback and ratings for properties after stays.
 
 ### 6. Admin Dashboard
 Provides administrators tools to manage users, properties, and reports.
+## API Security
+
+### 1. Authentication
+Uses **JWT tokens** to verify user identity and maintain secure sessions.
+
+### 2. Authorization
+Ensures users can only access or modify resources they own (e.g., a host can only edit their properties).
+
+### 3. Data Validation
+Prevents invalid or malicious input using backend validation rules.
+
+### 4. Encryption
+Sensitive data like passwords are hashed using algorithms such as **bcrypt** or **Argon2**.
+
+### 5. Rate Limiting
+Protects against brute-force and DDoS attacks by limiting excessive API requests.
+
+### Why Security Matters
+Security protects user data, financial transactions, and the credibility of the application.
+## CI/CD Pipeline
+
+### What is CI/CD?
+**Continuous Integration (CI)** means every code update is automatically tested and verified.  
+**Continuous Deployment (CD)** means new updates are automatically deployed to production once they pass tests.
+
+### Tools Used
+- **GitHub Actions:** Automates testing and deployment.
+- **Docker:** Ensures consistent environments across developers.
+- **Heroku / AWS / Render:** Example platforms for automatic deployment.
+
+### Why It’s Important
+CI/CD pipelines make the development process faster, more reliable, and reduce human errors during deployment.
