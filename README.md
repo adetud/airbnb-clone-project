@@ -32,3 +32,68 @@ Coordinates project timelines, divides tasks, monitors progress, ensures team co
 ### Security
 **JWT (JSON Web Tokens)** — Used for authentication and session management.  
 **HTTPS** — Ensures encrypted communication between client and server.
+## Database Design
+
+### Key Entities
+1. **User**
+   - id (Primary Key)
+   - name
+   - email
+   - password
+   - created_at
+
+2. **Property**
+   - id (Primary Key)
+   - user_id (Foreign Key → User)
+   - title
+   - description
+   - price_per_night
+   - location
+
+3. **Booking**
+   - id (Primary Key)
+   - user_id (Foreign Key → User)
+   - property_id (Foreign Key → Property)
+   - start_date
+   - end_date
+   - status
+
+4. **Payment**
+   - id (Primary Key)
+   - booking_id (Foreign Key → Booking)
+   - amount
+   - payment_method
+   - payment_status
+
+5. **Review**
+   - id (Primary Key)
+   - user_id (Foreign Key → User)
+   - property_id (Foreign Key → Property)
+   - rating
+   - comment
+
+### Relationships
+- One **User** can own multiple **Properties**
+- One **User** can make multiple **Bookings**
+- Each **Booking** belongs to one **User** and one **Property**
+- Each **Booking** has one **Payment**
+- One **User** can leave multiple **Reviews**
+## Feature Breakdown
+
+### 1. User Management
+Handles user registration, login, profile updates, and authentication.
+
+### 2. Property Management
+Allows property owners to list new properties, upload details, and manage availability.
+
+### 3. Booking System
+Enables users to book available properties, manage reservations, and view booking history.
+
+### 4. Payment Integration
+Handles payment processing, refunds, and transaction history securely.
+
+### 5. Reviews and Ratings
+Allows guests to leave feedback and ratings for properties after stays.
+
+### 6. Admin Dashboard
+Provides administrators tools to manage users, properties, and reports.
